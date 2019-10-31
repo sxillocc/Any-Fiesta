@@ -4,7 +4,8 @@
 class Route
 {
     public:
-    Route();
+        void AdminLogin();
+        void AdminHomePage();
 };
  
 #endif 
