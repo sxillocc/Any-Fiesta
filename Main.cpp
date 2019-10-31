@@ -23,7 +23,7 @@ int main(){
             r.AdminLogin();
             break;
         case 2:
-            /* code */
+            r.PublicHomePage();
             break;
         case 3:
             cout<<"\n\nThank-you for using Any-Fiesta\n";

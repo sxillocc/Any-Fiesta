@@ -6,6 +6,10 @@ class Route
     public:
         void AdminLogin();
         void AdminHomePage();
+        void PublicLogin();
+        void PublicHomePage();
+        void PublicRegister();
+        void PublicNavPage();
 };
  
 #endif 

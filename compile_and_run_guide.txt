@@ -1,0 +1,14 @@
+Run following command in your shell:-
+
+-->
+g++ \
+Main.cpp \
+Pages/AdminLogin.cpp \
+Pages/AdminHomePage.cpp \
+Pages/PublicLogin.cpp \
+Pages/PublicRegister.cpp \
+Pages/PublicHomePage.cpp \
+Pages/PublicNavPage.cpp
+
+-->
+./a.out
