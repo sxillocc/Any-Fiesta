@@ -1,6 +1,7 @@
 Run following command in your shell:-
 
 -->
+\
 g++ \
 Main.cpp \
 Pages/AdminLogin.cpp \
@@ -8,7 +9,12 @@ Pages/AdminHomePage.cpp \
 Pages/PublicLogin.cpp \
 Pages/PublicRegister.cpp \
 Pages/PublicHomePage.cpp \
-Pages/PublicNavPage.cpp
+Pages/PublicNavPage.cpp \
+Pages/PublicProfile.cpp \
+Pages/PublicNotf.cpp \
+Pages/EventReg.cpp \
+Pages/AdminNotf.cpp 
+
 
 -->
 ./a.out

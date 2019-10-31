@@ -3,35 +3,32 @@
 #include "header_files/Route.h"
 using namespace std;
 
-void Route::PublicHomePage()
+void Route::PublicProfile()
 {
-    int n;
-    Route r;
-
     system("clear");
     cout << endl;
+    cout << "Profile\n\n";
+    int n;
 
-    cout << "Public Portal\n\n";
-    cout << "1. Login\n";
-    cout << "2. Register\n";
-    cout << "3. Forgot Password\n";
-    cout << "4. Exit\n";
+    cout << "Name: Shaktiraj Daudra \n";
+    cout << "Unique Id: 5321 \n";
+    cout << "Gender: Male \n";
+    cout << "Phone: 7359802004\n";
+    cout << "College id: 2018kucp1092\n";
 
-    cout << "Enter Your Choice: ";
+    cout << "\n\n1. Back\n";
+    cout << "2. Exit\n";
+    cout << "Enter your Choice: ";
     cin >> n;
 
     switch (n)
     {
     case 1:
-        r.PublicLogin();
+        PublicNavPage();
         break;
+
     case 2:
-        r.PublicRegister();
-        break;
-    case 3:
-        break;
-    case 4:
-        cout << "\n\nThank-you for using Any-Fiesta\n";
+        cout << "\n\nThank-you for using Any-Fiesta!\n";
         break;
 
     default:
@@ -46,7 +43,7 @@ void Route::PublicHomePage()
             cin >> choice;
 
             if(choice == 'y'){
-                PublicHomePage();
+                PublicProfile();
             }
             if(choice == 'n'){
                 cout << "\n\nThank-you for using Any-Fiesta\n";
