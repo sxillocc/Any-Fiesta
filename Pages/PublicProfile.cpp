@@ -8,7 +8,6 @@ void Route::PublicProfile()
     system("clear");
     cout << endl;
     cout << "Profile\n\n";
-    int n;
 
     cout << "Name: Shaktiraj Daudra \n";
     cout << "Unique Id: 5321 \n";
@@ -16,6 +15,7 @@ void Route::PublicProfile()
     cout << "Phone: 7359802004\n";
     cout << "College id: 2018kucp1092\n";
 
+    int n;
     cout << "\n\n1. Back\n";
     cout << "2. Exit\n";
     cout << "Enter your Choice: ";

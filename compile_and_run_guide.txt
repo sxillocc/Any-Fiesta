@@ -13,7 +13,9 @@ Pages/PublicNavPage.cpp \
 Pages/PublicProfile.cpp \
 Pages/PublicNotf.cpp \
 Pages/EventReg.cpp \
-Pages/AdminNotf.cpp 
+Pages/AdminNotf.cpp \
+Modules/Credential.cpp \
+Modules/User.cpp
 
 
 -->
