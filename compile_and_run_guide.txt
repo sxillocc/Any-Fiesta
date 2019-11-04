@@ -16,7 +16,8 @@ Pages/EventReg.cpp \
 Pages/AdminNotf.cpp \
 Modules/Credential.cpp \
 Modules/User.cpp \
-Pages/ForgetPass.cpp
+Pages/ForgetPass.cpp \
+Modules/Notf.cpp
 
 
 -->
