@@ -33,6 +33,10 @@ void Route::AdminHomePage(){
             /* code */
             break;
         
+        case 4:
+            SendNotf(-1);
+            break;
+        
         default:
             break;
     }

@@ -19,7 +19,8 @@ Modules/User.cpp \
 Pages/ForgetPass.cpp \
 Modules/Notf.cpp \
 Pages/UserSearch.cpp \
-Pages/UserManagement.cpp
+Pages/UserManagement.cpp \
+Pages/SendNotf.cpp
 
 
 -->

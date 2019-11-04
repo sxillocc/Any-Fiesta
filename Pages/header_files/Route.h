@@ -17,6 +17,7 @@ class Route
         void EventReg(int);
         void PublicNotf(int);
         void ForgetPass();
+        void SendNotf(int);
 };
  
 #endif 
