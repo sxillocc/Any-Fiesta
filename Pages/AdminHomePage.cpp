@@ -11,10 +11,10 @@ void Route::AdminHomePage(){
     Route r;
 
     cout<<"Welcome to Admin Portal!\n\n";
-    cout<<"1. ....\n";
-    cout<<"2. ....\n";
-    cout<<"3. ....\n";
-    cout<<"4. ....\n";
+    cout<<"1. Events Management\n";
+    cout<<"2. User Management\n";
+    cout<<"3. Result\n";
+    cout<<"4. Send Notification\n";
     
     cout<<"Enter your choice: ";
     cin>>n;
@@ -26,9 +26,9 @@ void Route::AdminHomePage(){
             break;
 
         case 2:
-            /* code */
+            UserManagement();
             break;
-        
+
         case 3:
             /* code */
             break;

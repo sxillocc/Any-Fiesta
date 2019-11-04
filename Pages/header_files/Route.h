@@ -7,6 +7,8 @@ class Route
         void AdminLogin();
         void AdminHomePage();
         void AdminNotf();
+        void UserManagement();
+        void UserSearch(int);
         void PublicLogin();
         void PublicHomePage();
         void PublicRegister();
