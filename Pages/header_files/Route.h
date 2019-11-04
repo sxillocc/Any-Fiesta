@@ -18,6 +18,9 @@ class Route
         void PublicNotf(int);
         void ForgetPass();
         void SendNotf(int);
+        void EventManagement();
+        void AddEvents();
+        void ViewEvents();
 };
  
 #endif 

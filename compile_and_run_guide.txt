@@ -20,7 +20,11 @@ Pages/ForgetPass.cpp \
 Modules/Notf.cpp \
 Pages/UserSearch.cpp \
 Pages/UserManagement.cpp \
-Pages/SendNotf.cpp
+Modules/Event.cpp \
+Pages/SendNotf.cpp \
+Pages/EventManagement.cpp \
+Pages/ViewEvents.cpp \
+Pages/AddEvents.cpp
 
 
 -->

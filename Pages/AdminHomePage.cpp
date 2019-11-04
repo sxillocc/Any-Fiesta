@@ -22,7 +22,7 @@ void Route::AdminHomePage(){
     switch (n)
     {
         case 1:
-            /* code */
+            EventManagement();
             break;
 
         case 2:
