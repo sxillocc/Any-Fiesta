@@ -8,12 +8,13 @@ class Route
         void AdminHomePage();
         void AdminNotf();
         void PublicLogin();
-        static void PublicHomePage();
+        void PublicHomePage();
         void PublicRegister();
         void PublicNavPage(int);
         void PublicProfile(int);
         void EventReg(int);
         void PublicNotf(int);
+        void ForgetPass();
 };
  
 #endif 

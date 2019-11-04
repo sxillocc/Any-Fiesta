@@ -29,6 +29,7 @@ void Route::PublicHomePage()
         r.PublicRegister();
         break;
     case 3:
+        r.ForgetPass();
         break;
     case 4:
         cout << "\n\nThank-you for using Any-Fiesta\n";
