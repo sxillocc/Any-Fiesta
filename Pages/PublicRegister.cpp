@@ -4,12 +4,28 @@
 
 #include<iostream>
 #include<string>
+#include<bits/stdc++.h>
 #include"header_files/Route.h"
 using namespace std;
 #include "../Modules/header_files/User.h"
 #include "../Modules/header_files/Cred.h"
 
-int currentUid = 4000;
+int currentUid = 0;
+vector<User> userList;
+
+void loadUsers(){
+    userList.push_back(User(3090,"Shaktiraj Daudra", "7359802004", "2018kucp1092",Cred(3090,"shaktiraj"),0,"blue"));
+}
+
+void loadUid(){
+    //Later read Current UID from files
+    currentUid = 4000;
+}
+
+int writeUid(int x){
+    currentUid = x;
+    //write current-uid in file
+}
 
 void Route::PublicRegister(){
     system("clear");
@@ -19,7 +35,9 @@ void Route::PublicRegister(){
     string pass;
     User user;
     string name;
+
     cin.ignore();
+    
     cout<<"Your Name ? ";
     getline(cin,name);
     cout<<"Password: (No White Space)";
@@ -32,20 +50,26 @@ void Route::PublicRegister(){
     cin>>user.gender;
     cout<<"\n\nYour favorite color ?\n(this question will help us to identify you when you forget your password): ";
     cin>>user.color;
+    //TODO-- Check for empty strings and invalid entries
 
+    loadUid();
+    loadUsers();
+    
     int newUid;
-    //TODO-- Load Uid from uid-track-file into global "currentUid" variable.
     newUid = currentUid + 1;
-    currentUid = newUid;
+    writeUid(newUid);
     user.uid = newUid;
     Cred credential(user.uid,pass);
     user.credential = credential;
+
+    //TODO-- later write this userList in File;
+    userList.push_back(user);
+    
     cout<<"\n\nYour Unique Id is: "<<newUid<<endl;
     cout<<"Make sure to note your Unique Id, It can't be recover if you forget;"<<endl;
     cout<<endl<<"--------------------------------------\nYou have Successfully Registered\n";
     //TODO-- Write new Uid into files;
 
-    //control flow of pages;;;
     int n;
     cout << "\n\n1. Back\n";
     cout << "2. Exit\n";
