@@ -1,10 +1,9 @@
 #include <iostream>
 #include <stdlib.h>
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #include "header_files/Route.h"
 #include "../Modules/header_files/User.h"
 #include "../Modules/header_files/Cred.h"
-#include "PublicRegister.cpp"
 using namespace std;
 
 void Route::PublicLogin()
@@ -12,27 +11,41 @@ void Route::PublicLogin()
     system("clear");
     cout << endl;
 
-    cout << "Public Login \n\n" ;
+    cout << "Public Login \n\n";
 
-    loadUsers();
-    cout<<userList[0].name<<endl;
+    vector<Cred> loginList;
+    //TODO-- Load data from login files...
+    loginList.push_back(Cred(3090, "shaktiraj"));
 
     //Take id
     int id;
     cout << "Your Unique ID: ";
     cin >> id;
+    id = id - 3090;
 
     //Take Password
-    int pass;
+    string pass;
     cout << "Your Password: ";
     cin >> pass;
 
     //TODO-- CHECK IF CORRECT PASSWORD OR NOT
-    //TODO-- TRUE: NAVIGATE TO PUBLIC-HOMEPAGE
-    //TODO-- FALSE: HANDLE INVALIDE CALL
+    if (pass == loginList[id].getPass()){
+        PublicNavPage(id);
+    }
+    else{
+        char choice;
+        system("clear");
+        cout << endl;
 
-    //TODO-- REMOVE THIS LINES LATER-----
-    Route r;
-    r.PublicNavPage();
-    //-----------------------------------
+        cout << "Invalid Password" << endl;
+        cout << "Want to try again ? (y/n) ";
+        cin >> choice;
+
+        if (choice == 'y'){
+            PublicLogin();
+        }
+        else{
+            cout << "\n\nThank-you for using Any-Fiesta\n";
+        }
+    }
 }

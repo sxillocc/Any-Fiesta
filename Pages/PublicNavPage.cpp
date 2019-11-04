@@ -3,9 +3,9 @@
 #include "header_files/Route.h"
 using namespace std;
 
-void log_out();
+void log_out(int);
 
-void Route::PublicNavPage()
+void Route::PublicNavPage(int id)
 {
     int n;
     Route r;
@@ -25,19 +25,19 @@ void Route::PublicNavPage()
     switch (n)
     {
     case 1:
-        PublicProfile();
+        PublicProfile(id);
         break;
 
     case 2:
-        EventReg();
+        EventReg(id);
         break;
 
     case 3:
-        PublicNotf();
+        PublicNotf(id);
         break;
 
     case 4:
-        log_out();
+        log_out(id);
         break;
 
     default:
@@ -52,7 +52,7 @@ void Route::PublicNavPage()
             cin >> choice;
 
             if(choice == 'y'){
-                PublicNavPage();
+                PublicNavPage(id);
             }
             if(choice == 'n'){
                 cout << "\n\nThank-you for using Any-Fiesta\n";
@@ -63,7 +63,7 @@ void Route::PublicNavPage()
     }
 }
 
-void log_out()
+void log_out(int id)
 {
     char choice;
     Route r;
@@ -79,7 +79,7 @@ void log_out()
         break;
 
     case 'n':
-        r.PublicNavPage();
+        r.PublicNavPage(id);
         break;
 
     default:
@@ -95,7 +95,7 @@ void log_out()
             cin >> choice;
 
             if(choice == 'y'){
-                r.PublicNavPage();
+                r.PublicNavPage(id);
             }
             if(choice == 'n'){
                 cout << "\n\nThank-you for using Any-Fiesta\n";

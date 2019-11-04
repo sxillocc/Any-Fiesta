@@ -10,10 +10,10 @@ class Route
         void PublicLogin();
         static void PublicHomePage();
         void PublicRegister();
-        void PublicNavPage();
-        void PublicProfile();
-        void EventReg();
-        void PublicNotf();
+        void PublicNavPage(int);
+        void PublicProfile(int);
+        void EventReg(int);
+        void PublicNotf(int);
 };
  
 #endif 

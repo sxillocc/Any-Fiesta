@@ -3,6 +3,6 @@
 #include "header_files/Route.h"
 using namespace std;
 
-void Route::PublicNotf(){
+void Route::PublicNotf(int id){
     
 }

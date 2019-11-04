@@ -75,24 +75,7 @@ void Route::PublicRegister(){
         break;
 
     default:
-        while (1)
-        {
-            char choice;
-            system("clear");
-            cout << endl;
-
-            cout << "Invalid Choice" << endl;
-            cout << "Want to try again ? (y/n) ";
-            cin >> choice;
-
-            if(choice == 'y'){
-                PublicProfile();
-            }
-            if(choice == 'n'){
-                cout << "\n\nThank-you for using Any-Fiesta\n";
-                break;
-            }
-        }
+        cout << "\n\nThank-you for using Any-Fiesta!\n";
         break;
     }
 }

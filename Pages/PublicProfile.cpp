@@ -3,7 +3,7 @@
 #include "header_files/Route.h"
 using namespace std;
 
-void Route::PublicProfile()
+void Route::PublicProfile(int id)
 {
     system("clear");
     cout << endl;
@@ -24,7 +24,7 @@ void Route::PublicProfile()
     switch (n)
     {
     case 1:
-        PublicNavPage();
+        PublicNavPage(id);
         break;
 
     case 2:
@@ -43,7 +43,7 @@ void Route::PublicProfile()
             cin >> choice;
 
             if(choice == 'y'){
-                PublicProfile();
+                PublicProfile(id);
             }
             if(choice == 'n'){
                 cout << "\n\nThank-you for using Any-Fiesta\n";
