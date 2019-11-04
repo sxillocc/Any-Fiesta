@@ -10,23 +10,6 @@ using namespace std;
 #include "../Modules/header_files/User.h"
 #include "../Modules/header_files/Cred.h"
 
-int currentUid = 0;
-vector<User> userList;
-
-void loadUsers(){
-    userList.push_back(User(3090,"Shaktiraj Daudra", "7359802004", "2018kucp1092",Cred(3090,"shaktiraj"),0,"blue"));
-}
-
-void loadUid(){
-    //Later read Current UID from files
-    currentUid = 4000;
-}
-
-int writeUid(int x){
-    currentUid = x;
-    //write current-uid in file
-}
-
 void Route::PublicRegister(){
     system("clear");
     cout<<endl;
@@ -35,6 +18,8 @@ void Route::PublicRegister(){
     string pass;
     User user;
     string name;
+    int currentUid = 0;
+    vector<User> userList;
 
     cin.ignore();
     
@@ -52,12 +37,15 @@ void Route::PublicRegister(){
     cin>>user.color;
     //TODO-- Check for empty strings and invalid entries
 
-    loadUid();
-    loadUsers();
+    //TODO-- Load "track-uid-file"
+    currentUid = 4000;
+
+    //TODO-- Load "Users-file"
+    userList.push_back(User(3090,"Shaktiraj Daudra", "7359802004", "2018kucp1092",Cred(3090,"shaktiraj"),0,"blue"));
     
     int newUid;
     newUid = currentUid + 1;
-    writeUid(newUid);
+    currentUid = newUid;
     user.uid = newUid;
     Cred credential(user.uid,pass);
     user.credential = credential;
