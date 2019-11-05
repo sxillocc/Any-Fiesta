@@ -19,13 +19,13 @@ void Route::SendNotf(int e){
     
     string errors[4] = {"Date","Month","Hour","Minute"};
     if(e != -1){
-        cout<<"Incorrect "<<errors[e]<<"\n\n";
+        cout<<"(Incorrect "<<errors[e]<<")\n";
     }
 
     Notf notf;
     int x,y;
     cout<<"Give Following Details:- "<<endl;
-    cout<<"Give date and month: ";
+    cout<<"Date and Month: ";
     cin>>x>>y;
     if(x>31||x<0){
         SendNotf(0);
@@ -37,7 +37,7 @@ void Route::SendNotf(int e){
     notf.dd = x;
     notf.mm = y;
 
-    cout<<"Give hour and minute in 24 hour format: ";
+    cout<<"Hour and Minute (24 hour format): ";
     cin>>x>>y;
     if(x>23||x<0){
         SendNotf(2);
@@ -49,16 +49,17 @@ void Route::SendNotf(int e){
     notf.hour = x;
     notf.minute = y;
 
-    cout<<"Give Message: ";
+    cout<<"Message: ";
     cin.ignore();
     getline(cin,notf.msg);
 
     notificationList.push_back(notf);
     cout<<"\n\n-------------------------------\n";
-    cout<<"Notification send successfully\n";
+    cout<<"Notification send successfully";
     int n;
     cout << "\n\n1. Back\n";
     cout << "2. Exit\n";
+    cout<<"3. Show List(TODO- for test purpose || Remove later)\n";
     cout << "Enter your Choice: ";
     cin >> n;
 
@@ -70,6 +71,10 @@ void Route::SendNotf(int e){
 
     case 2:
         cout << "\n\nThank-you for using Any-Fiesta!\n";
+        break;
+
+    case 3:
+        PublicNotf(3090);
         break;
 
     default:

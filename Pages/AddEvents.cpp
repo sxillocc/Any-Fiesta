@@ -13,14 +13,19 @@ void Route::AddEvents()
     Route r;
     int currentEid = 200;
     vector<Event> eventList;
+    eventList.push_back(Event(196,"Treasure Hunt",2,7,5,"All Teams have to search various items kept hidden.Various hints will be provided."));
+    eventList.push_back(Event(197,"Dance Mania",2,10,8,"All Teams have to give their group dance Performances."));
+    eventList.push_back(Event(198,"Essay Writing",1,1,1,"All participants will have to write an essay on a particular topic to be alloted at the time of event."));
+    eventList.push_back(Event(199,"GK Quiz",2,2,2,"All teams will be asked various GK questions."));
+    eventList.push_back(Event(200,"Pro Kabaddi",2,7,7,"All Teams will Kabaddi matches in a knock out tournament."));
 
-    cout << "Enter event\'s name: ";
+    cout<<"Give Following Details:- \n";
+    cout << "A) Event Name: ";
     cin.ignore();
     getline(cin, e.name);
-    cout << "\n";
-    cout << "Event\'s type? \n";
-    cout << "1. Individual/Solo Event\n";
-    cout << "2. Team Event\n";
+    cout << "B) Event Type: \n";
+    cout << "\t\t1. Individual/Solo Event\n";
+    cout << "\t\t2. Team Event\n";
     cout << "Your choice: ";
     while (1)
     {
@@ -33,9 +38,9 @@ void Route::AddEvents()
         }
         else if (e.type == 2)
         {
-            cout << "Enter maximum members allowed\n";
+            cout << "a)Enter maximum members allowed: ";
             cin >> e.max;
-            cout << "Enter minimum members allowed\n";
+            cout << "b)Enter minimum members allowed: ";
             cin >> e.min;
             break;
         }
@@ -45,7 +50,7 @@ void Route::AddEvents()
         }
     }
     cin.ignore();
-    cout << "\nEnter Description of Event: ";
+    cout << "C) Event Description: ";
     getline(cin, e.description);
 
     int newEid;
@@ -54,10 +59,12 @@ void Route::AddEvents()
     e.id = newEid;
 
     eventList.push_back(e);
+    cout<<"\nEvent added Successfully.";
 
     int n;
     cout << "\n\n1. Back\n";
     cout << "2. Exit\n";
+    cout<<"3. Show List(TODO- for test purpose || Remove later)\n";
     cout << "Enter your Choice: ";
     cin >> n;
 
@@ -69,6 +76,10 @@ void Route::AddEvents()
 
     case 2:
         cout << "\n\nThank-you for using Any-Fiesta!\n";
+        break;
+    
+    case 3:
+        ViewEvents();
         break;
 
     default:

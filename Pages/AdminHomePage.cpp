@@ -11,10 +11,10 @@ void Route::AdminHomePage(){
     Route r;
 
     cout<<"Welcome to Admin Portal!\n\n";
-    cout<<"1. Events Management\n";
+    cout<<"1. Event Management\n";
     cout<<"2. User Management\n";
-    cout<<"3. Result\n";
-    cout<<"4. Send Notification\n";
+    cout<<"3. Send Notification\n";
+    cout<<"4. Log-out\n";
     
     cout<<"Enter your choice: ";
     cin>>n;
@@ -30,11 +30,11 @@ void Route::AdminHomePage(){
             break;
 
         case 3:
-            /* code */
+            SendNotf(-1);
             break;
         
         case 4:
-            SendNotf(-1);
+            cout<<"\n\nThank-you for using Any-Fiesta\n";
             break;
         
         default:

@@ -34,7 +34,7 @@ void Route::UserManagement()
     cout << "User Management\n\n";
     cout << "1. User List\n";
     cout << "2. Search User\n";
-    cout << "3. Back\n";
+    cout << "3. Go Back\n";
     cout << "4. Exit\n";
 
     cout << "Enter Your Choice: ";
@@ -43,11 +43,12 @@ void Route::UserManagement()
     switch (n)
     {
     case 1:
+        system("clear");
         showCompleteList(userList);
         break;
     case 2:
         int uid;
-        cout<<"\n\nGive id to be searched: ";
+        cout<<"\nGive id to be searched: ";
         cin>>uid;
         uid = uid - 3090;
         if(uid>=0 and uid<userList.size()){
@@ -105,8 +106,7 @@ void Route::UserManagement()
 }
 
 void showCompleteList(vector<User> userList){
-    system("clear");
-    cout << endl;
+    cout << endl<< "User List"<<endl<<endl;
 
     for(int i=0;i<userList.size();i++){
         cout<<userDetail(i,userList)<<endl;

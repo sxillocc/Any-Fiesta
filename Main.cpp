@@ -4,7 +4,8 @@
 using namespace std;
 
 void greetingAndChoices(){
-    cout<<"Welcome to Any-Fiesta\n\n";
+    system("clear");
+    cout<<"\nWelcome to Any-Fiesta\n\n";
     cout<<"1. Admin Portal\n2. Public Portal\n3. Exit\n";
 }
 
@@ -31,6 +32,7 @@ int main(){
         
         default:
             cout<<"\n\nSorry, Invalid Choice\n";
+            cout<<"Thank-you for using Any-Fiesta\n";
             break;
     }
     return 0;

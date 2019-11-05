@@ -23,17 +23,18 @@ void Route::PublicRegister(){
 
     cin.ignore();
     
-    cout<<"Your Name ? ";
-    getline(cin,name);
-    cout<<"Password: (No White Space)";
+    cout<<"Give following details:- \n";
+    cout<<"A) Your Name: ";
+    getline(cin,user.name);
+    cout<<"B) Password(No White Space): ";
     cin>>pass;
-    cout<<"Your Phone Number ? ";
+    cout<<"C) Your Phone Number: ";
     cin>>user.phone;
-    cout<<"Your College id ? ";
+    cout<<"D) Your College id: ";
     cin>>user.cid;
-    cout<<"Gender ?(0 = Male, 1 = Female)";
+    cout<<"E) Gender(0 = Male, 1 = Female): ";
     cin>>user.gender;
-    cout<<"\n\nYour favorite color ?\n(this question will help us to identify you when you forget your password): ";
+    cout<<"F) Your favorite color ?\n(this question will help us to identify you when you forget your password): ";
     cin>>user.color;
     //TODO-- Check for empty strings and invalid entries
 
@@ -53,24 +54,30 @@ void Route::PublicRegister(){
     userList.push_back(User(3099,"Monika", "9544368385", "2018kucp1111",Cred(3099,"monika"),1,"pink"));
     userList.push_back(User(4000,"Priya", "8005777302", "2018kucp1112",Cred(4000,"priya"),1,"blue"));
 
+    //Generate new-uid
     int newUid;
     newUid = currentUid + 1;
     currentUid = newUid;
     user.uid = newUid;
+    
+    //generate credential
     Cred credential(user.uid,pass);
     user.credential = credential;
 
     //TODO-- later write this userList in File;
     userList.push_back(user);
     
+    //TODO-- Write new Uid into files;
+
     cout<<"\n\nYour Unique Id is: "<<newUid<<endl;
     cout<<"Make sure to note your Unique Id, It can't be recover if you forget;"<<endl;
     cout<<endl<<"--------------------------------------\nYou have Successfully Registered\n";
-    //TODO-- Write new Uid into files;
 
+    //Show back Menu
     int n;
     cout << "\n\n1. Back\n";
     cout << "2. Exit\n";
+    cout<<"3. Show List(TODO- for test purpose || Remove later)\n";
     cout << "Enter your Choice: ";
     cin >> n;
 
@@ -83,6 +90,60 @@ void Route::PublicRegister(){
     case 2:
         cout << "\n\nThank-you for using Any-Fiesta!\n";
         break;
+
+    case 3:
+        system("clear");
+        cout << endl
+             << "User List" << endl
+             << endl;
+
+        for (int i = 0; i < userList.size(); i++)
+        {
+            cout << "Name: " + userList[i].name + "\nUnique Id: " +
+                        to_string(userList[i].uid) + "\nPhone: " + userList[i].phone + "\nCollege-id: " + userList[i].cid + " \n"
+                 << endl;
+        }
+
+        int n;
+        cout << "\n\n1. Back\n";
+        cout << "2. Exit\n";
+        cout << "Enter your Choice: ";
+        cin >> n;
+        Route r;
+
+        switch (n)
+        {
+        case 1:
+            r.PublicHomePage();
+            break;
+
+        case 2:
+            cout << "\n\nThank-you for using Any-Fiesta!\n";
+            break;
+
+        default:
+            while (1)
+            {
+                char choice;
+                system("clear");
+                cout << endl;
+
+                cout << "Invalid Choice" << endl;
+                cout << "Want to try again ? (y/n) ";
+                cin >> choice;
+
+                if (choice == 'y')
+                {
+                    r.PublicHomePage();
+                }
+                if (choice == 'n')
+                {
+                    cout << "\n\nThank-you for using Any-Fiesta\n";
+                    break;
+                }
+            }
+            break;
+        }
 
     default:
         cout << "\n\nThank-you for using Any-Fiesta!\n";

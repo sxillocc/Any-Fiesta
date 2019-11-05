@@ -10,10 +10,15 @@ void Route::ViewEvents()
     cout << "\nEvents List\n\n";
     Route r;
     vector<Event> eventList;
+    eventList.push_back(Event(196,"Treasure Hunt",2,7,5,"All Teams have to search various items kept hidden.Various hints will be provided."));
+    eventList.push_back(Event(197,"Dance Mania",2,10,8,"All Teams have to give their group dance Performances."));
+    eventList.push_back(Event(198,"Essay Writing",1,1,1,"All participants will have to write an essay on a particular topic to be alloted at the time of event."));
+    eventList.push_back(Event(199,"GK Quiz",2,2,2,"All teams will be asked various GK questions."));
+    eventList.push_back(Event(200,"Pro Kabaddi",2,7,7,"All Teams will Kabaddi matches in a knock out tournament."));
     if (eventList.size() == 0)
     {
         cout << "No Events added yet" << endl;
-        cout << "ADD NOW ?? (y/n)";
+        cout << "You want to Add New Event ?:(y/n)";
         char choice;
         cin >> choice;
 
@@ -31,8 +36,8 @@ void Route::ViewEvents()
         for (int i = 0; i < eventList.size(); i++)
         {
             cout << i + 1 << ".\n";
-            cout << "Event : " << eventList[i].name << endl;
             cout << "Event ID : " << eventList[i].id << endl;
+            cout << "Event Name : " << eventList[i].name << endl;
             cout << "Event Type : ";
             if (eventList[i].type == 1)
             {
